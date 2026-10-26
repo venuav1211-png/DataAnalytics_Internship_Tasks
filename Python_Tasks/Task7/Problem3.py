@@ -1,0 +1,24 @@
+# Problem Name: Mars Exploration
+# HackerRank Link: https://www.hackerrank.com/challenges/mars-exploration/problem
+
+import math
+import os
+import random
+import re
+import sys
+
+def marsExploration(s):
+    count = 0
+    for i in range(len(s)):
+        if i % 3 == 1:
+            if s[i] != 'O':
+                count += 1
+        else:
+            if s[i] != 'S':
+                count += 1
+    return count
+
+if __name__ == '__main__':
+    s = input()
+    result = marsExploration(s)
+    print(result)
